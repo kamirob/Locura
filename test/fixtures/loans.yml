@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_loan: 1
+  return: 2019-02-26 11:06:37
+  equipment: one
+  user: one
+
+two:
+  id_loan: 1
+  return: 2019-02-26 11:06:37
+  equipment: two
+  user: two

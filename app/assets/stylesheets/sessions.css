@@ -1,0 +1,60 @@
+html, body, .login-container{
+    background-color: #b33939;
+}
+
+.row {
+    font-family: 'Montreal-Serial-Regular';
+    /*background:linear-gradient(135deg, #17ead9 0%,#6078ea 100%) !important;*/
+    justify-content: center;
+}
+
+.image{
+    text-align: center;
+}
+
+.card{
+    border-radius: 20px !important;
+    box-shadow: 17px 15px 51px 2px rgba(0,0,0,0.75);
+    transition: 0.3s;
+    justify-content: center;
+}
+.field input {
+    width: 100%;
+    color: #999;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius:50px;
+    outline:0px;
+}
+
+.check{
+    align-content: center;
+    text-align: center;
+    color: #999;
+    font-weight: bold;
+    font-size: 15px;
+}
+.button {
+    background: #3a7bd5;
+    background-position: right center; 
+    border-radius:50px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    width: 100%;
+}
+.button:hover { 
+    background-position: right center; 
+}
+
+.links{
+    color: #999;
+    text-align: center;
+}
+.form-text{
+    align-items: right;
+}
+

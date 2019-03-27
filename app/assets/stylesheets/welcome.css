@@ -1,0 +1,84 @@
+.dropdown{
+    text-align: right !important;
+    margin-right: 4em;
+}
+
+.btn{
+    margin-top: 1em;
+}
+
+.dropdown-menu.show{
+    background-color: transparent ;
+    text-align: center;
+    margin-right: 1em;
+    border: none
+}
+  
+.text-menu{
+    color: #757575;
+    border: none;
+    width: 90%;
+    border-radius: 6px;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.avatar{
+    border-radius: 100%;
+    outline: 0px;
+    text-align: right;
+}
+
+.content{    
+    background-image: url(office2.jpg);
+}
+.title-container{
+    font-family: 'Montreal-Serial-Regular';
+    font-size: 1.8em;
+    text-align: center;
+    color: blanchedalmond;
+}
+.title{
+    font-size: 2em;
+}
+.btn-container{
+    font-family: 'Montreal-Serial-Regular';
+    text-align: center;
+    background: #3a7bd5; 
+    border-radius:50px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 20px;
+}
+
+.button-center{
+    justify-content: center;
+    padding-bottom: 4em;
+}
+
+.title-loans{
+    padding-top: 1em;
+}
+.loans-container{
+    font-family: 'Montreal-Serial-Regular';
+    font-size: 2.3em;
+    text-align: center;
+    color: #039be5;
+    background-color:#d1ccc0; 
+}
+.historial{
+    padding: 0.5em !important;
+    width: 10em;
+}
+
+.historial-body{
+    color: black;
+}
+
+.historial-text{
+    font-size: 20px;
+}
+

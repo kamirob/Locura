@@ -1,0 +1,52 @@
+<html>
+  <body>
+    <div class="login-container">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="card">
+            <div class="row no-gutters">
+              <div class="col-md-6 image">
+                <%= image_tag "lalocura.jpg", size: "340x340"%>
+              </div>
+              <div class="col-md-6" id="form_container">
+
+                <h1 class="text-center">Ingresar</h1>
+                <br>
+                <br>
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <div class="field">
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo Electrónico" %>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña" %>
+                  </div>
+                  <br>
+                  <% if devise_mapping.rememberable? %>
+                    <div class="check">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :Recordarme %>
+                    </div>
+                  <% end %>  
+                  <br>                
+                  <div class="actions">
+                    <%= f.submit "Iniciar Sesión", class: 'button'%>
+                  </div>         
+                <% end %>
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col-md-4 links" >
+                    <%= link_to "Regístrate", new_registration_path(resource_name) %>
+                  </div> 
+                  <div class="col-md-8 links">
+                    <%= link_to "Olvidaste tu contraseña?", new_password_path(resource_name) %>
+                  </div> 
+              </div>  
+            </div>
+          </div>  
+        </div>
+      </div>  
+    </div>
+  </body>  
+</html>

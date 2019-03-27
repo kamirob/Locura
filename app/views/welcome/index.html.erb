@@ -1,0 +1,48 @@
+<html>
+    <body>
+        <div class="row container-row">
+            <div class="col-md-12">
+            <% if current_user %>        
+                <div class="content">
+                    <%= render "navbar" %>
+                    <%= yield %>
+                    <div class="title-container">   
+                        <p class="title">Hola <%= current_user.name%></p>
+                        <p>¿Que equipo necesitas hoy?</p>
+                    </div>
+
+                    <div class="row button-center">
+                        <div class="col-md-4">
+                            <div class="btn-container">    
+                                <%= link_to 'Solicitar Equipo', new_loan_path, :remote => true, 'data-toggle' => 'modal', 'data-target' => 'loan-modal'  %>
+                            </div>  
+                        </div>    
+                    </div> 
+                </div>        
+                <div class="loans-container">
+                    <p class="title-loans">Historial De Pedidos</p>
+                    <div class="row">
+                        <% @loan.each do |loan| %>
+                            <div class="col-md-4">
+                                <div class="card historial">
+                                    <div class="card-body historial-body">
+                                        <h3 class="card-title"><%= loan.equipment.name %></h3>
+                                        <h5 class="card-title"><%= loan.equipment.trademark %></h5>
+                                        <p class="card-text historial-text">Fecha Entrega Programada: <%= loan.return %></p>
+                                        <!--<td><%= link_to 'Show', loan %></td>-->
+                                    </div>
+                                </div>
+                            </div>    
+                        <% end %>
+                    </div>
+                </div>  
+                    <div id="loan-modal" style="display:none;"></div> 
+            <% else %>
+                <div>
+                    <%= link_to 'Iniciar Sesión', new_user_session_path, class: "btn btn-primary"%> 
+                </div> 
+            <%end%> 
+            </div>    
+        </div>        
+    </body>
+</html>
