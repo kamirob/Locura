@@ -1,8 +1,6 @@
 <div class="dropdown">
     <button class="btn btn-default" type="button"  data-toggle="dropdown">
-  
-            <%= image_tag gravatar_image_url(current_user.avatar, size: 40), height: 40, width: 40, class: "rounded-circle"%>
-                              
+        <%= image_tag user_avatar(current_user, 50), class: "rounded-circle"%>  
     </button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
         <% if current_user%>
