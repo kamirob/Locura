@@ -1,12 +1,22 @@
 .dropdown{
     text-align: right !important;
-    margin-right: 4em;
 }
 
+.avatar-menu{
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+}
 .btn{
     margin-top: 1em;
 }
 
+.fullname{
+    color: white;
+    font-size: 1em;
+    padding: none;
+    margin: 0;
+}
 .dropdown-menu.show{
     background-color: transparent ;
     text-align: center;
@@ -22,12 +32,6 @@
     margin-bottom: 0.5em;
     font-size: 1em;
     padding: 5px;
-}
-
-.avatar{
-    border-radius: 100%;
-    outline: 0px;
-    text-align: right;
 }
 
 .content{    

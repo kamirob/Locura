@@ -4,17 +4,19 @@
     </button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
         <% if current_user%>
-        <span class="text-menu">
-            <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "text-menu"%>
-        </span>    
+            <span class="text-menu">
+                <%= button_to "Editar Perfil", edit_user_registration_path,method: :get, class: "text-menu"%>
+            </span>  
+            <span class="text-menu">
+                <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "text-menu"%>
+            </span>   
         <% else %>
-        <span class="text-menu">    
-            <%= button_to "Iniciar Sesion", new_user_session_path, class: "text-menu"%>
-        </span>    
-        <span class="text-menu">    
-            <%= button_to "Crear Cuenta", new_user_registration_path, class: "text-menu"%>
-        </span>  
+            <span class="text-menu">    
+                <%= button_to "Iniciar Sesion", new_user_session_path, class: "text-menu"%>
+            </span>    
+            <span class="text-menu">    
+                <%= button_to "Crear Cuenta", new_user_registration_path, class: "text-menu"%>
+            </span>  
         <%end%>
     </ul>    
 </div>
-    

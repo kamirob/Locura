@@ -57,8 +57,31 @@
 }
 
 
-#user_avatar > input{
-  border-radius: 100px;
-  background-color: red;
-  border: none;
+#user_avatar{
+    background-color: #4caf50;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    font-size: 0.93em;
+    color: white;
+}
+
+.fullname{
+    font-size: 2.2em;
+    color: black;
+}
+
+.area{
+    font-size: 1.3em;
+}    
+
+.file_button{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+
+}
+.edit_user{
+    margin-top: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+
 }

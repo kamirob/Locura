@@ -1,26 +1,28 @@
 <div class="edit-containers">
   <div class="row">
-    <div class="col-md-4">
-      <h2 class= "center">Editar Cuenta</h2>
-
+    <div class="col-md-5">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-md-4">
             <div class="form-group">
               <% if resource.avatar.attached? %>
                 <%= image_tag resource.avatar.variant(resize: "100x100!"), class: "rounded-circle"%>
               <% else %>
-                <%= image_tag gravatar_image_url(current_user.email, size: 60), height: 40, width: 40, class: "rounded-circle"%>
+                <%= image_tag gravatar_image_url(current_user.email, size: 100), height: 100, width: 100, class: "rounded-circle"%>
               <% end %>
             </div> 
           </div>  
-          <div class="image-upload">
-            <p> <%= f.file_field :avatar %> </p>
+          <div class="col-md-8">
+            <p class="fullname"><%=current_user.name%> <%=current_user.lastname%></p> 
+            <p class="area"><%=current_user.department.name%></p> 
           </div>
         </div>  
 
+        <div class="row file_button">
+          <p class="file_button"> <%= f.file_field :avatar %> </p>
+        </div>
         <div class="form-group">
             <%= f.text_field :name, placeholder: "Nombre" %>
         </div>
@@ -50,7 +52,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "Actualizar", class: 'button' %>
+          <%= f.submit "Editar", class: 'button' %>
         </div>
         </br>
       <% end %>
